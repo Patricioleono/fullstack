@@ -13,7 +13,7 @@ header = {
 
 @images.get("/images/getImages")
 def getTenImages():
-    data = requests.get(f'{urlApi}images/search?limit=10&api_key=apiKey')
+    data = requests.get(f'{urlApi}images/search?limit=10&api_key={apiKey}')
     if  data.status_code == 200:
         return data.json()
     else:
